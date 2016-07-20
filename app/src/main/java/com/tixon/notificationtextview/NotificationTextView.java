@@ -15,7 +15,6 @@ import android.widget.TextView;
  */
 public class NotificationTextView extends TextView {
     Paint backgroundPaint;
-    Paint textPaint;
     RectF rectFLeft, rectFRight;
 
     public NotificationTextView(Context context) {
@@ -46,7 +45,6 @@ public class NotificationTextView extends TextView {
     }
 
     private void drawBackground(Canvas canvas) {
-        //canvas.drawCircle(getWidth()/2, getHeight()/2, 4, backgroundPaint);
         //left arc
         canvas.drawArc(new RectF(0, 0, getHeight(), getHeight()), 90, 180, false, backgroundPaint);
         //right arc
@@ -55,7 +53,6 @@ public class NotificationTextView extends TextView {
         if(getWidth() > getHeight()) {
             canvas.drawRect(new RectF(getHeight()/2, 0, getWidth() - getHeight()/2, getHeight()), backgroundPaint);
         }
-        //canvas.drawText(getText(), 0, getText().length(), getWidth()/2 - 8, getHeight()/2 + 10, textPaint);
     }
 
     private void init() {
@@ -63,11 +60,6 @@ public class NotificationTextView extends TextView {
         backgroundPaint.setAntiAlias(true);
         backgroundPaint.setStyle(Paint.Style.FILL);
         backgroundPaint.setColor(Color.parseColor("#2196f3"));
-
-        textPaint = new Paint();
-        textPaint.setAntiAlias(true);
-        textPaint.setColor(Color.parseColor("#ffffff"));
-        textPaint.setTextSize(Utils.dpToPx(11, getContext()));
 
         rectFLeft = new RectF(0, 0, getHeight()/2, getHeight());
         rectFRight = new RectF(getWidth() - getHeight()/2, 0, getWidth(), getHeight());
