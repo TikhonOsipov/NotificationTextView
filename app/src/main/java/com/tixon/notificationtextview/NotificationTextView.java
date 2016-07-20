@@ -41,8 +41,8 @@ public class NotificationTextView extends TextView {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
         drawBackground(canvas);
+        super.onDraw(canvas);
     }
 
     private void drawBackground(Canvas canvas) {
@@ -55,7 +55,7 @@ public class NotificationTextView extends TextView {
         if(getWidth() > getHeight()) {
             canvas.drawRect(new RectF(getHeight()/2, 0, getWidth() - getHeight()/2, getHeight()), backgroundPaint);
         }
-        canvas.drawText(getText(), 0, getText().length(), getWidth()/2 - 8, getHeight()/2 + 10, textPaint);
+        //canvas.drawText(getText(), 0, getText().length(), getWidth()/2 - 8, getHeight()/2 + 10, textPaint);
     }
 
     private void init() {

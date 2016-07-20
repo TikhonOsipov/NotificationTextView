@@ -9,14 +9,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tixon.notificationtextview.MainActivity">
 
-    <com.tixon.notificationtextview.NotificationTextView
-        android:id="@+id/textViewNotification"
-        android:layout_centerInParent="true"
+    <LinearLayout
+        android:orientation="vertical"
         android:gravity="center"
-        android:textColor="#ffffff"
-        android:textSize="11sp"
-        android:minWidth="18dp"
+        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:text="123456" />
+        android:layout_height="wrap_content">
+
+        <com.tixon.notificationtextview.NotificationTextView
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:minWidth="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text="1" />
+
+        <com.tixon.notificationtextview.NotificationTextView
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:minWidth="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text=" 10 " />
+
+        <com.tixon.notificationtextview.NotificationTextView
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:minWidth="18dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text=" 100 " />
+
+        <com.tixon.notificationtextview.NotificationTextView
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:textColor="#ffffff"
+            android:textSize="11sp"
+            android:minWidth="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text=" 123456 " />
+    </LinearLayout>
 </RelativeLayout>
